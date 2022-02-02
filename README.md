@@ -28,3 +28,5 @@ This package requires the following:
 - matplotlib
 
 This ﬁle is using a language called Markdown (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+Features should be developed on branches. To create and switch to a branch, use the command `git checkout -b new_branch_name` To switch to an existing branch, use `git checkout new_branch_name`
