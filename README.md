@@ -20,3 +20,11 @@ Copyright (c) 2022, Fei
  
 Project based on the 
 [Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms) version 1.6.
+
+This package requires the following:
+
+- numpy
+
+- matplotlib
+
+This ﬁle is using a language called Markdown (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
