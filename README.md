@@ -27,4 +27,4 @@ This package requires the following:
 
 - matplotlib
 
-This ﬁle is using a language called Markdown (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+This ﬁle is using a language called Markdown (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
