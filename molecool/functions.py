@@ -1,9 +1,8 @@
 """Provide the primary functions."""
-import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 
 
 def calculate_distance(rA, rB):
@@ -101,7 +100,8 @@ def write_xyz(file_location, symbols, coordinates):
 
     if num_atoms != len(coordinates):
         raise ValueError(
-            f"write_xyz : the number of symbols ({num_atoms}) and number of coordinates ({len(coordinates)}) must be the same to write xyz file!"
+            f"write_xyz : the number of symbols ({num_atoms}) and number of \
+                coordinates ({len(coordinates)}) must be the same to write xyz file!"
         )
 
     with open(file_location, "w+") as f:
