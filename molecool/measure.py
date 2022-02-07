@@ -2,6 +2,9 @@
 This module is for functions that perform measurements.
 """
 
+import numpy as np
+
+
 def calculate_distance(rA, rB):
     """Calculate the distance between two points.
 
@@ -28,10 +31,11 @@ def calculate_distance(rA, rB):
 
     return distance
 
+
 def calculate_angle(rA, rB, rC, degrees=False):
     AB = rB - rA
     BC = rB - rC
-    theta=np.arccos(np.dot(AB, BC)/(np.linalg.norm(AB)*np.linalg.norm(BC)))
+    theta = np.arccos(np.dot(AB, BC)/(np.linalg.norm(AB)*np.linalg.norm(BC)))
 
     if degrees:
         return np.degrees(theta)

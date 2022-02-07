@@ -1,6 +1,13 @@
 """
 Functions for visualization of molecules
 """
+import numpy as np
+import matplotlib.pyplot as plt
+
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+from .atom_data import atom_colors
+
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
 
@@ -31,23 +38,24 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
         for atoms, bond_length in draw_bonds.items():
             atom1 = atoms[0]
 
+
 def bond_histogram(bond_list, save_location=None, dpi=300, graph_min=0, graph_max=2):
     lengths = []
     for atoms, bond_length in bond_list.items():
         lengths.append(bond_length)
-    
+
     bins = np.linspace(graph_min, graph_max)
-    
+
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    
+
     plt.xlabel('Bond Length (angstrom)')
     plt.ylabel('Number of Bonds')
-    
+
     ax.hist(lengths, bins=bins)
-    
+
     # Save figure
     if save_location:
         plt.savefig(save_location, dpi=dpi)
-    
+
     return ax
